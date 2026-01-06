@@ -80,7 +80,6 @@ You can use the following values to change the settings of the server on boot.
 | PGID              | 1000                 | Group ID for file permissions                                                                             |
 | SERVER_NAME       | starrupture-server   | Name of the server                                                                                        |
 | DEFAULT_PORT      | 7777                 | The port the server listens on (UDP)                                                                      |
-| MAX_PLAYERS       | 4                    | Maximum number of players (1-4)                                                                           |
 | MULTIHOME         |                      | Optional: Bind to a specific network interface IP address                                                 |
 | UPDATE_ON_START   | true                 | If set to false, skips downloading and validating server files from Steam on startup                      |
 

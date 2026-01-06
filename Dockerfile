@@ -23,7 +23,6 @@ ENV HOME=/home/steam \
     CONFIG_DIR=/starrupture-config \
     DEFAULT_PORT=7777 \
     SERVER_NAME=starrupture-server \
-    MAX_PLAYERS=4 \
     MULTIHOME="" \
     UPDATE_ON_START=true
 
