@@ -25,7 +25,7 @@ COPY ./scripts /home/steam/server/
 
 COPY branding /branding
 
-RUN mkdir -p /starrupture /starrupture-config && \
+RUN mkdir -p /home/steam/server_files /home/steam/server_data && \
     chmod +x /home/steam/server/*.sh
 
 WORKDIR /home/steam/server

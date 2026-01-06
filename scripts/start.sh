@@ -2,20 +2,20 @@
 # shellcheck source=scripts/functions.sh
 source "/home/steam/server/functions.sh"
 
-cd /starrupture || exit
+SERVER_FILES="/home/steam/server_files"
+
+cd "$SERVER_FILES" || exit
 
 LogAction "Starting StarRupture Dedicated Server"
 
-# Find the server executable (common Unreal Engine paths)
-if [ -f "./StarRuptureServer.sh" ]; then
-    SERVER_EXEC="./StarRuptureServer.sh"
+# Find the server executable
+if [ -f "./StarRupture/Binaries/Linux/StarRuptureServerEOS-Linux-Shipping" ]; then
+    SERVER_EXEC="./StarRupture/Binaries/Linux/StarRuptureServerEOS-Linux-Shipping"
 elif [ -f "./StarRupture/Binaries/Linux/StarRuptureServer" ]; then
     SERVER_EXEC="./StarRupture/Binaries/Linux/StarRuptureServer"
-elif [ -f "./StarRuptureServerEOS-Linux-Shipping" ]; then
-    SERVER_EXEC="./StarRuptureServerEOS-Linux-Shipping"
 else
-    LogError "Could not find server executable. Please check /starrupture directory."
-    ls -la /starrupture/
+    LogError "Could not find server executable. Directory contents:"
+    ls -laR "$SERVER_FILES/"
     exit 1
 fi
 

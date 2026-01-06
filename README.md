@@ -46,8 +46,8 @@ services:
     env_file:
       - .env
     volumes:
-      - ./server-files:/starrupture
-      - ./server-data:/starrupture-config
+      - ./server-files:/home/steam/server_files
+      - ./server-data:/home/steam/server_data
 ```
 
 Then run:
@@ -65,8 +65,8 @@ docker run -d \
     --stop-timeout 30 \
     -p 7777:7777/udp \
     --env-file .env \
-    -v ./server-files:/starrupture \
-    -v ./server-data:/starrupture-config
+    -v ./server-files:/home/steam/server_files \
+    -v ./server-data:/home/steam/server_data
     indifferentbroccoli/starrupture-server-docker
 ```
 
@@ -113,8 +113,8 @@ The StarRupture dedicated server uses an in-game management interface:
 
 ## Volumes
 
-* `/starrupture` - Server installation files
-* `/starrupture-config` - Server configuration and save files
+* `/home/steam/server_files` - Server installation files
+* `/home/steam/server_data` - Server configuration and save files
 
 ## License
 
