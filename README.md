@@ -114,14 +114,6 @@ The StarRupture dedicated server uses an in-game management interface:
 
 * `/home/steam/server-files` - Server installation files, configuration, and save files
 
-## License
-
-This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
-
-## Disclaimer
-
-This is an unofficial Docker container for StarRupture dedicated server. StarRupture is owned by Creepy Jar. This project is not affiliated with or endorsed by Creepy Jar.
-
 ## Support
 
 For issues and questions:
