@@ -27,7 +27,7 @@ fi
 term_handler() {
     if ! shutdown_server; then
         # Force shutdown if graceful shutdown fails
-        kill -SIGTERM "$(pidof StarRupture)"
+        kill -SIGTERM "$(pidof wine-preloader)"
     fi
     tail --pid="$killpid" -f 2>/dev/null
 }

@@ -53,7 +53,7 @@ shutdown_server() {
     LogAction "Attempting graceful server shutdown"
     
     # Find the process ID
-    local pid=$(pidof StarRupture)
+    local pid=$(pidof wine-preloader)
     
     if [ -n "$pid" ]; then
         # Send SIGTERM to allow graceful shutdown
