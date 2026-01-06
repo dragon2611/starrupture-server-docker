@@ -1,11 +1,13 @@
 #BUILD THE SERVER IMAGE
 FROM --platform=linux/amd64 cm2network/steamcmd:root
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
+RUN dpkg --add-architecture i386 && \
+    apt-get update && apt-get install -y --no-install-recommends \
     gettext-base=0.21-12 \
     procps=2:4.0.2-3 \
     jq=1.6-2.1+deb12u1 \
     wine \
+    wine32:i386 \
     wine64 \
     xvfb \
     xauth \

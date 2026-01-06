@@ -34,8 +34,8 @@ term_handler() {
 
 trap 'term_handler' SIGTERM
 
-# Start the server
-./start.sh &
+# Start the server as steam user
+su - steam -c "cd /home/steam/server && ./start.sh" &
 
 # Process ID of su
 killpid="$!"
