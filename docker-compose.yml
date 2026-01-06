@@ -1,0 +1,15 @@
+---
+services:
+  starrupture:
+    image: indifferentbroccoli/starrupture-server-docker
+    platform: linux/amd64
+    restart: unless-stopped
+    container_name: starrupture
+    stop_grace_period: 30s
+    ports:
+      - 7777:7777/udp
+    env_file:
+      - .env.example
+    volumes:
+      - ./server-files:/starrupture
+      - ./server-data:/starrupture-config

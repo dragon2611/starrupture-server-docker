@@ -1,0 +1,131 @@
+# StarRupture Server Docker
+
+[![GitHub License](https://img.shields.io/github/license/indifferentbroccoli/starrupture-server-docker?style=for-the-badge&color=6aa84f)](https://github.com/indifferentbroccoli/starrupture-server-docker/blob/main/LICENSE)
+[![Docker Pulls](https://img.shields.io/docker/pulls/indifferentbroccoli/starrupture-server-docker?style=for-the-badge&color=6aa84f)](https://hub.docker.com/r/indifferentbroccoli/starrupture-server-docker)
+
+Game server hosting
+
+Fast RAM, high-speed internet
+
+Eat lag for breakfast
+
+[Try our game server hosting!](https://indifferentbroccoli.com)
+
+## StarRupture Dedicated Server Docker
+
+A Docker container for running a StarRupture dedicated server using SteamCMD.
+
+## Server Requirements
+
+| Resource | Minimum | Recommended |
+|----------|---------|-------------|
+| CPU      | 4 cores | 4+ cores    |
+| RAM      | 8GB     | 16GB        |
+| Storage  | 30GB    | 50GB        |
+
+> [!NOTE]
+> StarRupture is in Early Access. Server features and requirements may change.
+
+## How to use
+
+Copy the .env.example file to a new file called .env. Then use either `docker compose` or `docker run`
+
+### Docker compose
+
+Starting the server with Docker Compose:
+
+```yaml
+services:
+  starrupture:
+    image: indifferentbroccoli/starrupture-server-docker
+    restart: unless-stopped
+    container_name: starrupture
+    stop_grace_period: 30s
+    ports:
+      - 7777:7777/udp
+    env_file:
+      - .env
+    volumes:
+      - ./server-files:/starrupture
+      - ./server-data:/starrupture-config
+```
+
+Then run:
+
+```bash
+docker-compose up -d
+```
+
+### Docker Run
+
+```bash
+docker run -d \
+    --restart unless-stopped \
+    --name starrupture \
+    --stop-timeout 30 \
+    -p 7777:7777/udp \
+    --env-file .env \
+    -v ./server-files:/starrupture \
+    -v ./server-data:/starrupture-config
+    indifferentbroccoli/starrupture-server-docker
+```
+
+## Environment Variables
+
+You can use the following values to change the settings of the server on boot.
+
+| Variable          | Default              | Info                                                                                                      |
+|-------------------|----------------------|-----------------------------------------------------------------------------------------------------------|
+| PUID              | 1000                 | User ID for file permissions                                                                              |
+| PGID              | 1000                 | Group ID for file permissions                                                                             |
+| SERVER_NAME       | starrupture-server   | Name of the server                                                                                        |
+| DEFAULT_PORT      | 7777                 | The port the server listens on (UDP)                                                                      |
+| MAX_PLAYERS       | 4                    | Maximum number of players (1-4)                                                                           |
+| MULTIHOME         |                      | Optional: Bind to a specific network interface IP address                                                 |
+| UPDATE_ON_START   | true                 | If set to false, skips downloading and validating server files from Steam on startup                      |
+
+## Connecting to Your Server
+
+1. **Start the server** using Docker Compose or Docker Run
+2. **Launch StarRupture** on your gaming PC
+3. **Go to "Manage Server"** in the game menu
+4. **Enter your server's external IP address** (or localhost if testing locally)
+5. **Create a new world** by clicking "New" and naming your server
+6. **Load the world** by clicking "Load Server" and selecting your world
+7. **Join the game** by going back and selecting "Join Game", then entering your server IP
+
+## Port Forwarding
+
+If your server is behind a router, you need to forward the following port:
+
+* **7777** (UDP) - Game server port
+
+For more information and instructions specific to your router, visit [portforward.com](https://portforward.com/).
+
+## Server Management
+
+The StarRupture dedicated server uses an in-game management interface:
+
+1. Launch StarRupture on your PC
+2. Go to **Manage Server**
+3. Enter your server's IP address and password (you will set this on first connection)
+4. From here you can create, load, and manage server worlds
+
+## Volumes
+
+* `/starrupture` - Server installation files
+* `/starrupture-config` - Server configuration and save files
+
+## License
+
+This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
+
+## Disclaimer
+
+This is an unofficial Docker container for StarRupture dedicated server. StarRupture is owned by Creepy Jar. This project is not affiliated with or endorsed by Creepy Jar.
+
+## Support
+
+For issues and questions:
+* GitHub Issues: [Report an issue](https://github.com/indifferentbroccoli/starrupture-server-docker/issues)
+* Game Server Hosting: [indifferentbroccoli.com](https://indifferentbroccoli.com)
