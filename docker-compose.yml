@@ -11,5 +11,5 @@ services:
     env_file:
       - .env.example
     volumes:
-      - ./server-files:/home/steam/server_files
-      - ./server-data:/home/steam/server_data
+      - ./server-files:/home/steam/server-files
+      - ./server-data:/home/steam/server-data

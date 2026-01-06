@@ -8,6 +8,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     wine \
     wine64 \
     xvfb \
+    xauth \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
@@ -28,7 +29,7 @@ COPY ./scripts /home/steam/server/
 
 COPY branding /branding
 
-RUN mkdir -p /home/steam/server_files /home/steam/server_data && \
+RUN mkdir -p /home/steam/server-files /home/steam/server-data && \
     chmod +x /home/steam/server/*.sh
 
 WORKDIR /home/steam/server

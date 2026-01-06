@@ -13,7 +13,7 @@ else
     groupmod -o -g "${PGID}" steam
 fi
 
-chown -R steam:steam /home/steam/server_files /home/steam/server_data /home/steam/
+chown -R steam:steam /home/steam/server-files /home/steam/server-data /home/steam/
 
 cat /branding
 

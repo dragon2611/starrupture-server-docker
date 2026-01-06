@@ -2,7 +2,7 @@
 # shellcheck source=scripts/functions.sh
 source "/home/steam/server/functions.sh"
 
-SERVER_FILES="/home/steam/server_files"
+SERVER_FILES="/home/steam/server-files"
 
 cd "$SERVER_FILES" || exit
 
