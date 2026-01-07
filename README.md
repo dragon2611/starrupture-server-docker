@@ -45,6 +45,7 @@ services:
     stop_grace_period: 30s
     ports:
       - 7777:7777/udp
+      - 7777:7777/tcp
       - 27015:27015/udp
     env_file:
       - .env
@@ -66,6 +67,7 @@ docker run -d \
     --name starrupture \
     --stop-timeout 30 \
     -p 7777:7777/udp \
+    -p 7777:7777/tcp \
     -p 27015:27015/udp \
     --env-file .env \
     -v ./server-files:/home/steam/server-files
@@ -81,7 +83,7 @@ You can use the following values to change the settings of the server on boot.
 | PUID              | 1000                 | User ID for file permissions                                                                              |
 | PGID              | 1000                 | Group ID for file permissions                                                                             |
 | SERVER_NAME       | starrupture-server   | Name of the server                                                                                        |
-| DEFAULT_PORT      | 7777                 | The port the server listens on (UDP)                                                                      |
+| DEFAULT_PORT      | 7777                 | The port the server listens on (UDP + TCP)                                                                      |
 | QUERY_PORT        | 27015                | The query port for server browser and status queries (UDP)                                                |
 | MULTIHOME         |                      | Optional: Bind to a specific network interface IP address                                                 |
 | UPDATE_ON_START   | true                 | If set to false, skips downloading and validating server files from Steam on startup                      |
@@ -100,7 +102,7 @@ You can use the following values to change the settings of the server on boot.
 
 If your server is behind a router, you need to forward the following port:
 
-* **7777** (UDP) - Game server port
+* **7777** (UDP + TCP) - Game server port
 
 For more information and instructions specific to your router, visit [portforward.com](https://portforward.com/).
 
