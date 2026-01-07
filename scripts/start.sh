@@ -20,13 +20,15 @@ fi
 
 LogInfo "Found server executable: ${SERVER_EXEC}"
 LogInfo "Server starting on port ${DEFAULT_PORT}"
+LogInfo "Query port: ${QUERY_PORT}"
+LogInfo "Server name: ${SERVER_NAME}"
 
 # Build the startup command with Wine and xvfb
-STARTUP_CMD="xvfb-run --auto-servernum wine ${SERVER_EXEC} -Log -port=${DEFAULT_PORT}"
+STARTUP_CMD="xvfb-run --auto-servernum wine ${SERVER_EXEC} -Log -Port=${DEFAULT_PORT} -QueryPort=${QUERY_PORT} -ServerName=\"${SERVER_NAME}\""
 
 # Add multihome if specified
 if [ -n "${MULTIHOME}" ]; then
-    STARTUP_CMD="${STARTUP_CMD} -multihome=${MULTIHOME}"
+    STARTUP_CMD="${STARTUP_CMD} -MULTIHOME=${MULTIHOME}"
 fi
 
 LogInfo "Starting with Wine..."
