@@ -34,8 +34,13 @@ term_handler() {
 
 trap 'term_handler' SIGTERM
 
+export DEFAULT_PORT
+export QUERY_PORT
+export SERVER_NAME
+export MULTIHOME
+
 # Start the server as steam user
-su - steam -c "cd /home/steam/server && ./start.sh" &
+su - steam -c "cd /home/steam/server && DEFAULT_PORT='${DEFAULT_PORT}' QUERY_PORT='${QUERY_PORT}' SERVER_NAME='${SERVER_NAME}' MULTIHOME='${MULTIHOME}' ./start.sh" &
 
 # Process ID of su
 killpid="$!"
