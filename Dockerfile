@@ -22,6 +22,7 @@ LABEL maintainer="support@indifferentbroccoli.com" \
 ENV HOME=/home/steam \
     CONFIG_DIR=/starrupture-config \
     DEFAULT_PORT=7777 \
+    QUERY_PORT=27015 \
     SERVER_NAME=starrupture-server \
     MULTIHOME="" \
     UPDATE_ON_START=true
