@@ -13,7 +13,7 @@ DEFAULT_PORT="${DEFAULT_PORT:-7777}"
 QUERY_PORT="${QUERY_PORT:-27015}"
 SERVER_NAME="${SERVER_NAME:-starrupture-server}"
 
-SERVER_EXEC="$SERVER_FILES/StarRuptureServerEOS.exe"
+SERVER_EXEC="$SERVER_FILES/StarRupture/Binaries/Win64/StarRuptureServerEOS-Win64-Shipping.exe"
 
 if [ ! -f "$SERVER_EXEC" ]; then
     LogError "Could not find server executable at: $SERVER_EXEC"
