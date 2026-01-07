@@ -8,8 +8,7 @@ cd "$SERVER_FILES" || exit
 
 LogAction "Starting StarRupture Dedicated Server"
 
-# Look for Windows server executable
-SERVER_EXEC="$SERVER_FILES/StarRupture/Binaries/Win64/StarRuptureServerEOS-Win64-Shipping.exe"
+SERVER_EXEC="$SERVER_FILES/StarRuptureServerEOS.exe"
 
 if [ ! -f "$SERVER_EXEC" ]; then
     LogError "Could not find server executable at: $SERVER_EXEC"
