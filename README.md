@@ -28,8 +28,7 @@ A Docker container for running a StarRupture dedicated server using SteamCMD.
 > [!NOTE]
 > StarRupture is in Early Access. Server features and requirements may change.
 
-> > [!NOTE]
-> StarRupture does not currently support connecting via a local address. You must configure a hairpin NAT (Some routers do this by default)
+StarRupture does not currently support connecting via a local address. You must configure a hairpin NAT (Some routers do this by default)
 
 ## How to use
 
