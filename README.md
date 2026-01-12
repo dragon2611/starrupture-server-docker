@@ -11,7 +11,7 @@ Fast RAM, high-speed internet
 
 Eat lag for breakfast
 
-[Try our game server hosting!](https://indifferentbroccoli.com)
+[Try our StarRupture server hosting free for 2 days!](https://indifferentbroccoli.com/star-rupture-server-hosting)
 
 ## StarRupture Dedicated Server Docker
 
