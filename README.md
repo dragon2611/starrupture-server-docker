@@ -3,6 +3,7 @@
 [![GitHub License](https://img.shields.io/github/license/indifferentbroccoli/starrupture-server-docker?style=for-the-badge&color=6aa84f)](https://github.com/indifferentbroccoli/starrupture-server-docker/blob/main/LICENSE)
 [![GitHub Release](https://img.shields.io/github/v/release/indifferentbroccoli/starrupture-server-docker?style=for-the-badge&color=6aa84f)](https://github.com/indifferentbroccoli/starrupture-server-docker/releases)
 [![GitHub Repo stars](https://img.shields.io/github/stars/indifferentbroccoli/starrupture-server-docker?style=for-the-badge&color=6aa84f)](https://github.com/indifferentbroccoli/starrupture-server-docker)
+[![Discord](https://img.shields.io/discord/798321161082896395?style=for-the-badge&label=Discord&labelColor=5865F2)](https://discord.gg/indifferentbroccoli)
 [![Docker Pulls](https://img.shields.io/docker/pulls/indifferentbroccoli/starrupture-server-docker?style=for-the-badge&color=6aa84f)](https://hub.docker.com/r/indifferentbroccoli/starrupture-server-docker)
 
 Game server hosting
