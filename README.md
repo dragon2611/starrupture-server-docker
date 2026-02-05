@@ -49,7 +49,6 @@ services:
     ports:
       - 7777:7777/udp
       - 7777:7777/tcp
-      - 27015:27015/udp
     env_file:
       - .env
     volumes:
