@@ -40,7 +40,7 @@ export SERVER_NAME
 export MULTIHOME
 
 # Start the server as steam user
-su - steam -c "cd /home/steam/server && DEFAULT_PORT='${DEFAULT_PORT}' QUERY_PORT='${QUERY_PORT}' SERVER_NAME='${SERVER_NAME}' MULTIHOME='${MULTIHOME}' ./start.sh" &
+su - steam -c "cd /home/steam/server && DEFAULT_PORT='${DEFAULT_PORT}' QUERY_PORT='${QUERY_PORT}' SERVER_NAME='${SERVER_NAME}' MULTIHOME='${MULTIHOME}' THREADS='${THREADS}' ./start.sh" &
 
 # Process ID of su
 killpid="$!"
