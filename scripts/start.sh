@@ -28,7 +28,7 @@ LogInfo "Query port: ${QUERY_PORT}"
 LogInfo "Server name: ${SERVER_NAME}"
 
 # Build the startup command with Wine and xvfb
-STARTUP_CMD="xvfb-run --auto-servernum wine ${SERVER_EXEC} -Log -Port=${DEFAULT_PORT} -QueryPort=${QUERY_PORT} -ServerName=\"${SERVER_NAME}\""
+STARTUP_CMD="xvfb-run --auto-servernum wine ${SERVER_EXEC} -Log -Port=${DEFAULT_PORT} -QueryPort=${QUERY_PORT} -ServerName=\"${SERVER_NAME}\" -RCWebControlDisable -RCWebInterfaceDisable"
 
 # Add multihome if specified
 if [ -n "${MULTIHOME}" ]; then
