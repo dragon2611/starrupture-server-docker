@@ -2,7 +2,7 @@
 services:
   starrupture:
     #image: indifferentbroccoli/starrupture-server-docker
-    build .
+    build: .
     platform: linux/amd64
     restart: unless-stopped
     container_name: starrupture
