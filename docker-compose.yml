@@ -14,3 +14,6 @@ services:
       - .env.example
     volumes:
       - ./server-files:/home/steam/server-files
+    security_opt:
+    #Dockers CopyFail Mitigations break steamcmd, this is a horrible way to handle it but since this repo is used on a dedicated VM i'm less worried about doing this than I otherwise would be.
+      - seccomp=unconfined
